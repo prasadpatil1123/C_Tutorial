@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  // Size of Function
+  printf("%llu\n", sizeof(int));
+//   printf("%d\n", sizeof(float));
+//   printf("%d\n", sizeof(char));
+
+// malloc
+// int *ptr ;
+//   ptr = (int *) malloc(5, sizeof(int));
+
+//   for(int i =0; i< 5; i++){
+//     scanf("%d", &ptr[i]);
+//   }
+
+  // calloc
+   int *ptr = (int *)calloc(5, sizeof(int));
+
+  for (int i = 0; i < 5; i++) {
+    printf("number %d = %d\n", i + 1, ptr[i]);
+  }
+  free(ptr);
+  return 0;
+}
